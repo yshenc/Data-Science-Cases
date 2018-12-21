@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wine2"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.03"
+        android:background="?attr/colorBackgroundFloating"
+        android:gravity="center"
+        android:text="Wine Expert"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="168dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="0.84"
+            android:background="@android:drawable/editbox_background_normal"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Search"
+            android:textColor="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/Search"
+            android:layout_width="49dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@android:drawable/ic_search_category_default"
+            android:elevation="7dp" />
+
+        <Button
+            android:id="@+id/camera"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@android:drawable/ic_menu_camera" />
+
+    </LinearLayout>
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.03">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/background_light" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="181dp">
+
+                <LinearLayout
+                    android:id="@+id/Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="162dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:drawable/editbox_dropdown_light_frame"
+                    android:orientation="vertical"
+                    android:tooltipText="Description">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Qualiry"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center_horizontal|center"
+                android:text="Recommand Wine"
+                android:textColor="@android:color/background_light"
+                android:textColorLink="?android:attr/textColorHighlightInverse"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="47dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="60dp"
+                    android:layout_weight="0.16"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/rec1" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/rec2" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="0.14"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/rec3" />
+            </LinearLayout>
+        </LinearLayout>
+    </TabHost>
+
+
+</LinearLayout>
